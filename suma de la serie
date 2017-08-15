@@ -1,0 +1,23 @@
+/Samuel Adams Suarez Arias 08/08/2017
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+#include <iostream>  
+using namespace std;
+
+void main () 
+{int N,a=0,S=0 ;
+do {cout<<"ingrese el numero de la serie: "; 
+cin>> N;
+}while (N<=0);
+while (a<=N)
+ {S=S+a;
+ a=a+2;
+}
+ cout<< "la suma total de la serie es:" <<S<<endl;
+ getch();
+
+}
