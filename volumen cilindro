@@ -1,0 +1,22 @@
+// Samuel Adams Suarez Arias 15/08/2017
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+float  vol_cilindro(float r, float a);
+using namespace std;
+void main() {
+    float radio, altura, volumen;	
+    cout <<"Ingrese el radio:" ; cin >>radio;	
+    cout <<"Ingrese la altura:"; cin >> altura;
+	volumen= vol_cilindro(radio, altura);
+    cout <<"El volumen es:" <<volumen;    
+    getch (); 
+ }
+float vol_cilindro (float r, float a)
+  {  float PI=3.141516;
+	 float v;
+	  v= PI*r*r*a ;	
+	 return v;  }  
