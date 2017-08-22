@@ -1,0 +1,13 @@
+float ecucuadratica(float a, float b, float c,float d, float &x1, float &x2)
+{
+if (d==0)
+{-b/(2*a)
+}else
+	{if (d>0)
+      {x1=(-b+sqrt(d))/2*a;
+       x2=(-b-sqrt(d))/2*a;
+      }else
+        {if (d<0)
+		 x1=-b+sqrt(d*(-1));
+	     x2=-b-sqrt(d*(-1));
+	    }
