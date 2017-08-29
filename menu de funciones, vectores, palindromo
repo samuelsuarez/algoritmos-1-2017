@@ -1,0 +1,73 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#include <string>
+#include "stdlib.h"
+#define MAX 100
+
+using namespace std;
+
+void  areatri(float a,float b, float c);
+float intercalar(float A[], float B[], float C[]);
+void  leervector(int b [], int n1);
+void  leervector(int a[], int n2);
+void  leervector(int c[], int n3);
+void  escribirvector(int b[], int n);
+bool  palindromo(string var2);
+
+void main()
+{int opc;
+float a,b,c,A[MAX],B[MAX],C[MAX],N,inter;
+int n1,n2,n3;
+string var2;
+do { 
+	  cout<<"                  MENU                 "<<endl;
+	  cout<<"elija la opcion a su preferencia"<<endl;
+	  cout<<"1.- Area del triangulo en funcion a sus lados"<<endl;
+	  cout<<"2.- Intercalar vector"<<endl;
+	  cout<<"3.- Palindromo"<<endl;
+	  cout<<"0.- Si no quiere ninguna opcion"<<endl;
+	  cin>>opc;
+   switch (opc)
+  {case 1: areatri(a,b,c); break;
+   case 2: {do{cout<<"ingrese el tamaño del primer vector"<<endl;
+	         cin>>n1;
+			cout<<"ingrese el tamaño del segundo vector"<<endl;
+			 cin>>n2;
+			cout<<"ingrese el tamaño del segundo vector"<<endl;
+			cin>>n3;
+		   } while (n1<0 || n1>MAX || n2<0 || n2>MAX || n3<0 || n3>MAX);
+	   break;
+		   }
+  
+   case 3: palindromo (var2);
+   
+   }
+  }while (opc!=0);
+    
+getch();
+
+}
+
+
+	
+
+
+float areatri(float a, float b, float c)
+{do{
+  cout<<"ingrese el primer lado"<<endl;
+  cin>> a;
+  cout<<"ingrese el segundo lado"<<endl;
+  cin>>b;
+  cout<<"ingrese el tercer lado"<<endl;
+  cin>>c;
+}while (a<0 || b<0 || c<0);
+ int A;
+ A=(1/4)*(sqrt (pow(pow(a,2)+pow(b,2)+pow(c,2),2))-(2*(pow(a,4)+pow(b,4)+pow(c,4))));
+ cout<< "El area del triangulo es"<<A<<endl;
+}
+
+
+
+bool palindromo(
