@@ -1,0 +1,69 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+#include "math.h"
+#define MAX 100
+using namespace std;
+
+void leervector(int b[], int n);
+void valores(int b[],int n);
+void ordenado(int b[],int n);
+
+void main()
+{int b[MAX],n;
+cout<<"Ingrese la cantidad de terminos del vector: ";cin>>n;cout<<endl;
+leervector (b,n);
+valores (b,n);
+ordenado(b,n);
+
+
+
+
+getch();
+}
+
+
+
+
+void leervector (int b[],int n)
+{for (int i=0;i<n;i++)
+{cout<<"V[ "<<i<<" ]";cin>>b[i];
+}
+}
+
+void valores (int b[],int n)
+{int may=0,men=100;
+ int i=0;
+ while(i<n)
+ {while (b[i]>may)
+ {may=b[i];
+  }
+ i++;
+ }
+ int j=0;
+ while (j<n) 
+ {while (b[j]<men)
+ {men=b[j];
+ }
+ j++;
+ }
+ cout<<"El valor mayor es: "<<may<<endl;
+ cout<<"El valor menor es: "<<men<<endl;
+}
+
+void ordenado(int b[],int n)
+{int aux;
+ cout<<"El vector ordenado es: ";
+ for (int i=0;i<n-1;i++)
+ {for (int j=i+1;j<n;j++)
+	{ if (b[i]>b[j])
+       {aux=b[i];
+		b[i]=b[j];
+        b[j]=aux;
+       }
+
+   }
+ cout<<"V[ "<<i<<" ]";
+ cout<<b[i]<<endl;
+  }     
+ }
