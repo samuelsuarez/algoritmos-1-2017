@@ -1,0 +1,58 @@
+// datos empleado//
+//Samuel Adams Suarez//
+
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+#include <string>
+#define MAX 100
+
+using namespace std;
+
+struct templeado {
+	int nroempleado;
+	string nombre;
+	string apellido;
+	string direccion;
+	int telefono,celular;
+	float salariobruto;
+};
+
+void main()
+{ int cont=1,n;
+  templeado empleado[MAX];
+  do {
+    cout<< "Ingrese la cantidad de datos: ";
+    cin>>n;
+  } while (n<0 || n>MAX);
+  for (int i=0;i<n;i++)      
+  { cin.ignore ();
+	empleado [i].nroempleado = i++;
+    cout<<"Ingrese el nombre del empleado:"<<i++<<endl;
+    getline(cin, empleado [i].nombre);
+	cout<<"Ingrese el apellido del empleado:"<<i++<<endl;
+	getline(cin, empleado [i].apellido);
+	cout<<"Ingrese la direccion del empleado:"<<i++<<endl;
+	getline(cin, empleado [i].direccion);
+	cout<<"Ingrese el telefono del empleado:"<<i++<<endl;
+	cin>>empleado[i].telefono;
+	cout<<"Ingrese el celular del empleado:"<<i++<<endl;
+	cin>>empleado[i].celular;
+	cout<<"ingrese el salario bruto del empleado:"<<cont<<endl;
+	cin>>empleado[i].salariobruto;
+	
+
+}
+  for (int i=0;i<n;i++)      
+  { 
+    cout<<"El nombre del empleado"<<":"<<empleado [i].nombre<<endl;
+	cout<<"El apellido del empleado"<<":"<<empleado [i].apellido<<endl;
+	cout<<"La direccion del empleado:"<<":"<<empleado [i].direccion<<endl;
+	cout<<"El telefono del empleado"<<":"<<empleado[i].telefono<<endl;
+	cout<<"El celular del empleado:"<<":"<<empleado[i].celular<<endl;
+	cout<<"El salario bruto del empleado:"<<":"<<empleado[i].salariobruto<<endl;
+	
+	
+}
+  getch();
+}
